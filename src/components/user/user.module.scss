@@ -1,0 +1,66 @@
+.wrapp_user{
+    max-width: 968px;
+    width: 100%;
+    margin:  0 auto;
+    transition: all ease-in .5s;
+
+    @media(max-width:1360px){
+        padding: 1rem;
+        width: 80%;
+    }
+
+    @media(max-width:1360px){
+        padding: .5rem;
+        width: 70%;
+    }
+}
+
+
+.wrapp_user_active{
+    max-width: 968px;
+    width: 100%;
+    margin:  0 auto;
+    transition: all ease-in .5s;
+
+    @media(max-width:1360px){
+        padding: 1rem;
+        width: 80%;
+    }
+
+    @media(max-width:1160px){
+        padding: .5rem;
+        width: 70%;
+    }
+
+    @media(max-width:980px){
+        transform: translateX(30%);
+    }
+
+    @media(max-width:890px) {
+        transform: translateX(40%);
+    }
+
+    @media(max-width:768px) {
+        transform: translateX(50%);
+    }
+
+    @media(max-width:610px) {
+        transform: translateX(60%);
+    }
+
+    @media(max-width:380px) {
+        transform: translateX(70%);
+    }
+
+    @media(max-width:340px) {
+        transform: translateX(80%);
+    }
+
+}
+
+.user_name{
+   font-size: 1.5rem;
+   font-weight: 500;
+   line-height: 2.25rem;
+   margin-top: 2.25rem;
+}

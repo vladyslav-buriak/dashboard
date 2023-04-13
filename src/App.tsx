@@ -1,24 +1,30 @@
+
+import Home from './pages/Home/home';
+import "./scss/app.scss";
+import Layout from './layout';
+import { Routes, Route } from "react-router-dom";
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+//@ts-ignore
+export const MyContext = React.createContext();
 
 function App() {
+
+  const [openMenu, setOpenMenu] = useState(false)
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MyContext.Provider value={{ openMenu, setOpenMenu }}>
+        <Routes>
+
+          <Route path="/" element={<Layout />}>
+            <Route path="" element={<Home />}></Route>
+
+          </Route>
+        </Routes>
+      </MyContext.Provider>
+
     </div>
   );
 }
